@@ -45,9 +45,9 @@ void loop()
 
   if (manual == 0)
   {
-    sendData_2("AT+CIPSTART=\"TCP\",\"162.253.155.225\",80\r\n", 3000);                // it was 550 ms
-    sendData_2("AT+CIPSEND=39\r\n", 3000);                                             // it was 350 ms
-    operationStatues = sendData_3("GET http://eee.orgfree.com/status.txt\r\n", 3000);  // it was 350 ms
+    sendData_2("AT+CIPSTART=\"TCP\",\"162.253.155.225\",80\r\n", 3000);                // it was 550 ms now its less then 3 ms
+    sendData_2("AT+CIPSEND=39\r\n", 3000);                                             // it was 350 ms now its less then 3 ms
+    operationStatues = sendData_3("GET http://eee.orgfree.com/status.txt\r\n", 3000);  // it was 350 ms now its less then 60 ms
     Statues = operationStatues[41];
   }
   else
